@@ -1,0 +1,121 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  height: 100vh;
+  width: 100vw;
+}
+
+html {
+  font-size: 20px;
+}
+
+input {
+  grid-area: input;
+  grid-column: span 4;
+}
+
+.multiply {
+  grid-area: multiply;
+}
+
+.add {
+  grid-area: add;
+}
+
+.subtract {
+  grid-area: subtract;
+}
+
+.num9 {
+  grid-area: num9;
+}
+
+.num8 {
+  grid-area: num8;
+}
+
+.num7 {
+  grid-area: num7;
+}
+
+.num6 {
+  grid-area: num6;
+}
+
+.num5 {
+  grid-area: num5;
+}
+
+.num4 {
+  grid-area: num4;
+}
+
+.num3 {
+  grid-area: num3;
+}
+
+.num2 {
+  grid-area: num2;
+}
+
+.num1 {
+  grid-area: num1;
+}
+
+.num0 {
+  grid-area: num0;
+}
+
+body {
+  display: grid;
+  background: linear-gradient(0.45turn, rgb(37, 37, 239), powderblue);
+}
+
+.calc-container {
+  border-radius: 2%;
+  width: 30vw;
+  max-height: 100vh;
+  border: 1px solid black;
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  grid-template-rows: repeat(5, 1fr);
+  margin: auto;
+  grid-template-areas: "input input input input" "multiply divide add subtract" "num7 num8 num9 ." "num4 num5 num6 ." "num0 num1 num2 num3";
+}
+.calc-container .clear {
+  font-family: sans-serif;
+  font-size: 1.2rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.calc-container *:not(input) {
+  text-align: center;
+  font-size: 2rem;
+  font-family: monospace;
+  padding: 25% 0;
+  margin: 0.3rem;
+  color: white;
+  border-radius: 4px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.calc-container *:not(input):hover {
+  cursor: pointer;
+  background-color: rgba(0, 0, 255, 0.7);
+}
+.calc-container input {
+  font-size: 4em;
+  outline: none;
+}
+
+@media screen and (max-width: 729px) {
+  .calc-container {
+    width: 70%;
+  }
+}/*# sourceMappingURL=main.css.map */
